@@ -15,7 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@mono/api-interfaces": ["libs/api-interfaces/src/index.ts"]
+      "@mono/api-interfaces": ["libs/api-interfaces/src/index.ts"],
+      "@mono/entities": ["libs/entities/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

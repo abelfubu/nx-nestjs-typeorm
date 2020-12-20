@@ -1,0 +1,29 @@
+@url = http://localhost:3333/api/tasks
+
+###
+GET {{url}}?status=IN_PROGRESS&search=task
+
+###
+POST {{url}}
+Content-Type: application/json
+
+{
+  "title": "Test task",
+  "description": "Some description"
+}
+
+###
+GET {{url}}/02
+
+###
+DELETE {{url}}/4
+
+###
+PATCH {{url}}/2
+Content-Type: application/json
+
+{
+  "title": "Updated task",
+  "description": "Some description",
+  "status": "DONE"
+}

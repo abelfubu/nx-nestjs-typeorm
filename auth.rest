@@ -1,0 +1,42 @@
+@url = http://localhost:3333/api/auth
+@token = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNvbHRzdGVlbGUiLCJpYXQiOjE2MDg0NDg5MjYsImV4cCI6MTYwODQ1MjUyNn0.bQTlUvCOQ9u5qNrnVZ_JFiRzQexEIa4QUTtpflb5EGg
+###
+GET {{url}}
+
+###
+GET {{url}}/test
+Authorization: {{token}}
+
+###
+POST {{url}}/signup
+Content-Type: application/json
+
+{
+  "username": "fernando",
+  "password": "Asdfsdf$$456"
+}
+
+###
+POST {{url}}/signin
+Content-Type: application/json
+
+{
+  "username": "coltsteele",
+  "password": "Asdfsdf$$456"
+}
+
+###
+GET {{url}}/02
+
+###
+DELETE {{url}}/4
+
+###
+PATCH {{url}}/2
+Content-Type: application/json
+
+{
+  "title": "Updated task",
+  "description": "Some description",
+  "status": "DONE"
+}
